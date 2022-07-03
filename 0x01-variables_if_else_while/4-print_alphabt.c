@@ -12,31 +12,23 @@ int main(void)
 
 {
 
-char minusculas = 'a';
-
-char mayusculas = 'A';
+char letra = 'a';
 
 char retorno = '\n';
 
-while (minusculas <= 'z')
+while (letra <= 'z')
 
 {
 
-putchar (minusculas);
+if (letra != 'q' && letra != 'e')
 
-minusculas++;
+{
+
+putchar (letra);
 
 }
 
-
-
-while (mayusculas <= 'Z')
-
-{
-
-putchar (mayusculas);
-
-mayusculas++;
+letra++;
 
 }
 
@@ -44,4 +36,4 @@ putchar (retorno);
 
 return (0);
 
-i
+}

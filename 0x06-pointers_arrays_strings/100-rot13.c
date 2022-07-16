@@ -1,38 +1,43 @@
 #include "main.h"
 
 /**
- * rot13 - encode using rot13
- * @s: string to encode
- * Return: encoded string
+ * print_number - print an integer, without using long, arrays, or pointers
+ * @n: number to be printed
  */
-char *rot13(char *s)
+
+void print_number(int n)
 {
-	int a[53] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+	unsigned int tens, dig, pos = n;
 
-			'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
+	double temp_tens = 1;
 
-			'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+	if (n == 0)
 
-			'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+	_putchar('0');
 
-			'W', 'X', 'Y', 'Z'};
-	int b[53] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
-
-			'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-
-			'l', 'm', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W',
-
-			'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
-
-			'J', 'K', 'L', 'M'};
-	int i, j;
-
-	for (j = 0; s[j] != '\0'; j++)
+else
 	{
-		for (i = 0; a[i] != '\0' && s[j] != a[i]; i++)
-			if (s[j] == a[i])
-				s[j] = b[i];
+	if (n < 0)
+		{
+	pos = n * -1;
+			_putchar('-');
 
+
+		}
+
+		while (temp_tens <= pos)
+
+			temp_tens *= 10;
+
+		tens = temp_tens / 10;
+
+		while (tens >= 1)
+
+		{
+			dig = pos / tens;
+			_putchar(dig + '0');
+			pos = (pos - (tens * dig));
+			tens /= 10;
+		}
 	}
-	return (s);
 }

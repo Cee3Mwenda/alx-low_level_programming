@@ -1,7 +1,5 @@
 #Include "main.h"
 
-
-
 /**
  * _isdigit - main description
  * @c: return a digit
@@ -20,5 +18,4 @@ int _isdigit(int c)
 	else
 
 		return (0);
-
 }

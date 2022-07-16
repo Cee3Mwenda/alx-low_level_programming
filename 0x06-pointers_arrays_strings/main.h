@@ -18,8 +18,8 @@ char *cap_string(char *s);
 	
 char *leet(char *s);
 
-void print_number(int n);
-char *rot13(char *);
 
+char *rot13(char *);
+void print_number(int n);
 
 #endif

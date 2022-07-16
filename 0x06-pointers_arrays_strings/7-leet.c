@@ -14,6 +14,7 @@ char *leet(char *s)
 
 	int lc[5] = {97, 101, 111, 116, 108};
 	int code[5] = {4, 3, 0, 7, 1};
+
 	while (*(s + x))
 
 	{

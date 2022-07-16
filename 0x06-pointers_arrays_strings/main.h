@@ -19,6 +19,7 @@ char *cap_string(char *s);
 char *leet(char *s);
 
 void print_buffer(char *b, int size);
+
 char *rot13(char *);
 void print_number(int n);
 

@@ -1,57 +1,21 @@
-#include "main.h"
+#ifndef MAIN_H
 
-/**
- *
- *  * _strstr -  main descripttion
- *
- *   * @haystack: string where to search
- *
- *    * @needle: string to search
- *
- *     * Return: char * string
- *
- *      */
+#define MAIN_H
 
 
 
-char *_strstr(char *haystack, char *needle)
+char *_memset(char *s, char b, unsigned int n);
 
-{
+unsigned int _strspn(char *s, char *accept);
 
+char *_strpbrk(char *s, char *accept);
 
+char *_strstr(char *haystack, char *needle);
 
-	if (haystack == NULL || needle == NULL)
-
-		return (NULL);
-
-
-
-	if (*needle == '\0')
-
-		return (haystack);
+char *_strpbrk(char *s, char *accept);
 
 
 
-	while (*haystack != '\0')
-
-	{
-
-		if (*haystack == needle[0])
-
-		{
-
-			if (compara(haystack, needle))
-
-				return (haystack);
-
-		}
-
-		haystack++;
-
-	}
 
 
-
-	return (NULL);
-
-}
+#endif

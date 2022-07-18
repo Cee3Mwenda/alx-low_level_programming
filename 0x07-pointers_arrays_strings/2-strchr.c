@@ -1,4 +1,4 @@
-nclude <stdio.h>
+#include <stdio.h>
 
 
 
@@ -7,7 +7,7 @@ nclude <stdio.h>
 * @s: array of char
 * @c: char
 * Return: return  char string
-*/
+ */
 
 char *_strchr(char *s, char c)
 
